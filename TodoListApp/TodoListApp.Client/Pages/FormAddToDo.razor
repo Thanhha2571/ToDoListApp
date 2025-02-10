@@ -1,0 +1,66 @@
+@page "/add_todo"
+@using Blazored.LocalStorage
+@inject ILocalStorageService LocalStorage
+
+<PageTitle>Form Page</PageTitle>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="d-flex flex-column w-50 justify-content-center align-items-center">
+        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H2">Add New To Do</RadzenText>
+        <RadzenCard class="d-flex flex-column w-100 justify-content-center gap-3 p-12">
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">To Do</RadzenText>
+            <RadzenTextBox @bind-Value="NewTask.Name" Placeholder="Enter to do name..." Style="width: 100%" />
+
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Category</RadzenText>
+            <RadzenDropDown @bind-Value="NewTask.Category" Data="@Enum.GetValues(typeof(Category))"
+                Placeholder="Select category" Style="width: 100%" />
+
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Status</RadzenText>
+            <div class="d-flex gap-2 align-items-center">
+                <RadzenCheckBox @bind-Value="NewTask.Status" /> Completed
+            </div>
+
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Deadline</RadzenText>
+            <RadzenDatePicker @bind-Value="NewTask.Deadline" Placeholder="Select deadline" Style="width: 100%" />
+
+            <RadzenButton Text="Add Task" Click="@AddTask" />
+        </RadzenCard>
+    </div>
+</div>
+
+
+@code {
+    private List<ToDoItem> Tasks = new();
+    private ToDoItem NewTask = new ToDoItem();
+    private int Id = 1;
+
+    public class ToDoItem
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public bool Status { get; set; }
+        public Category Category { get; set; }
+        public DateTime? Deadline { get; set; }
+    }
+
+    public enum Category
+    {
+        None,
+        Personal,
+        Business
+    }
+
+    private async Task AddTask()
+    {
+        NewTask.Id = Id++;
+        Tasks.Add(NewTask);
+
+        await LocalStorage.SetItemAsync("tasks", Tasks);
+
+        @* Console.WriteLine("Current Tasks:"); *@
+        @* foreach (var task in Tasks)
+        {
+            Console.WriteLine($"ID: {task.Id}, Name: {task.Name}, Status: {(task.Status ? "Done" : "Not Done")}, Category: {task.Category}, Deadline: {task.Deadline?.ToShortDateString()}");
+        } *@
+        NewTask = new ToDoItem();
+    }
+}

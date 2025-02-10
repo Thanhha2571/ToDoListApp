@@ -1,0 +1,66 @@
+﻿@page "/"
+@using Blazored.LocalStorage
+@inject ILocalStorageService LocalStorage
+@using TodoListApp.Client.Models
+@* @inject ToDoItemDataService ToDoItemDataService *@
+
+<PageTitle>To Do Summarize</PageTitle>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="d-flex flex-column w-50 justify-content-center align-items-center">
+        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H2">To Do Summary</RadzenText>
+        <RadzenCard class="d-flex flex-column w-100 justify-content-center gap-3 p-12">
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Total To-Dos: @TotalTasks</RadzenText>
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Completed: @CompletedTasks</RadzenText>
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Not Completed: @NotCompletedTasks
+            </RadzenText>
+        </RadzenCard>
+    </div>
+</div>
+
+@code {
+    private List<ToDoItem> Tasks = new();
+    private int TotalTasks = 0;
+    private int CompletedTasks = 0;
+    private int NotCompletedTasks = 0;
+
+    @* public class ToDoItem
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public bool Status { get; set; }
+        public Category Category { get; set; }
+        public DateTime? Deadline { get; set; }
+    }
+
+    public enum Category
+    {
+        None,
+        Personal,
+        Business
+    } *@
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetTasksFromLocalStorage();
+        CalculateSummary();
+    }
+
+async Task GetTasksFromLocalStorage()
+    {
+        try
+        {
+            Tasks = await LocalStorage.GetItemAsync<List<ToDoItem>>("tasks") ?? new List<ToDoItem>();
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("error reading 'tasks'");
+        }
+    }
+
+    private void CalculateSummary()
+    {
+        TotalTasks = Tasks.Count;
+        CompletedTasks = Tasks.Count(t => t.Status);
+        NotCompletedTasks = TotalTasks - CompletedTasks;
+    }
+}

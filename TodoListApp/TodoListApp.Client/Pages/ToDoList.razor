@@ -1,0 +1,136 @@
+@page "/todo_list"
+@using Blazored.LocalStorage
+@inject ILocalStorageService LocalStorage
+@using TodoListApp.Client.Models
+@* @inject ToDoItemDataService ToDoItemDataService *@
+
+<PageTitle>Todo List</PageTitle>
+
+<div class="top-row px-4">
+    <a href="add_todo">Add New To Do</a>
+</div>
+
+<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="true"
+    FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
+    PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" Data="@Tasks" ColumnWidth="300px"
+    LogicalFilterOperator="LogicalFilterOperator.Or">
+    <Columns>
+        <RadzenDataGridColumn Property="@nameof(ToDoItem.Id)" Title="ID" Filterable="false" Width="80px"
+            TextAlign="TextAlign.Center" />
+        <RadzenDataGridColumn Property="@nameof(ToDoItem.Name)" Title="Task Name" Width="200px" />
+        <RadzenDataGridColumn Property="@nameof(ToDoItem.Status)" Title="Status" Width="100px">
+            <Template Context="data">
+                <span>@(data.Status ? "Completed" : "Not Completed")</span>
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn Property="@nameof(ToDoItem.Category)" Title="Category" Width="120px" />
+        <RadzenDataGridColumn Property="@nameof(ToDoItem.Deadline)" Title="Deadline" FormatString="{0:d}"
+            Width="160px" />
+        <RadzenDataGridColumn Title="Actions" Width="120px">
+            <Template Context="task">
+                <RadzenButton Text="Edit" Click="() => EditTask(task)" ButtonStyle="ButtonStyle.Primary" />
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+@if (EditingTask != null)
+{
+    <div class="d-flex align-items-center justify-content-center" style="margin-top: 20px;">
+        <div class="d-flex flex-column w-50 justify-content-center align-items-center">
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H2">Form Edit To Do</RadzenText>
+            <RadzenCard class="d-flex flex-column w-100 justify-content-center gap-3 p-12">
+                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">To Do</RadzenText>
+                <RadzenTextBox @bind-Value="EditingTask.Name" Placeholder="To Do Name" Style="width: 100%" />
+
+                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Category</RadzenText>
+                <RadzenDropDown @bind-Value="EditingTask.Category" Data="@Enum.GetValues(typeof(Category))"
+                    Placeholder="Select category" Style="width: 100%" />
+
+                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Status</RadzenText>
+                <div class="d-flex gap-2 align-items-center">
+                    <RadzenCheckBox @bind-Value="EditingTask.Status" /> Completed
+                </div>
+
+                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Deadline</RadzenText>
+                <RadzenDatePicker @bind-Value="EditingTask.Deadline" Placeholder="Select deadline" Style="width: 100%" />
+
+                <div>
+                    <RadzenButton Text="Save" Click="SaveTask" ButtonStyle="ButtonStyle.Success" />
+                    <RadzenButton Text="Cancel" Click="CancelEdit" ButtonStyle="ButtonStyle.Danger"
+                        Style="margin-left: 10px;" />
+                </div>
+            </RadzenCard>
+        </div>
+    </div>
+}
+
+@code {
+    private List<ToDoItem> Tasks = new();
+    private ToDoItem EditingTask { get; set; }
+
+    @* public class ToDoItem
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public bool Status { get; set; }
+        public Category Category { get; set; }
+        public DateTime? Deadline { get; set; }
+    }
+
+    public enum Category
+    {
+        None,
+        Personal,
+        Business
+    } *@
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetTasksFromLocalStorage();
+    }
+
+    async Task GetTasksFromLocalStorage()
+    {
+        try
+        {
+            Tasks = await LocalStorage.GetItemAsync<List<ToDoItem>>("tasks") ?? new List<ToDoItem>();
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("error reading 'tasks'");
+        }
+    }
+
+    private void EditTask(ToDoItem task)
+    {
+        EditingTask = new ToDoItem
+        {
+            Id = task.Id,
+            Name = task.Name,
+            Status = task.Status,
+            Category = task.Category,
+            Deadline = task.Deadline
+        };
+    }
+
+    private async Task SaveTask()
+    {
+        var task = Tasks.FirstOrDefault(t => t.Id == EditingTask.Id);
+        if (task != null)
+        {
+            task.Name = EditingTask.Name;
+            task.Status = EditingTask.Status;
+            task.Category = EditingTask.Category;
+            task.Deadline = EditingTask.Deadline;
+
+            await LocalStorage.SetItemAsync("tasks", Tasks);
+        }
+        EditingTask = null;
+    }
+
+    private void CancelEdit()
+    {
+        EditingTask = null;
+    }
+}

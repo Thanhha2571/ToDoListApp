@@ -1,0 +1,53 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = TodoListApp.Client
+build_property.RootNamespace = TodoListApp.Client
+build_property.ProjectDir = /Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/Pages/FormAddToDo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybUFkZFRvRG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/Pages/ToDoList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVG9Eb0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0L01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7fnoy3vtg3
+
+[/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0L05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-s2uo7fqdly

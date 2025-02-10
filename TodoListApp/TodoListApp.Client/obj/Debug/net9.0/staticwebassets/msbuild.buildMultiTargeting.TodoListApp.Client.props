@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/TodoListApp.Client.props" />
+</Project>
