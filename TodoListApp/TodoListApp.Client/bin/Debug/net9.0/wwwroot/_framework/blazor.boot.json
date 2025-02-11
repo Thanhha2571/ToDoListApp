@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TodoListApp.Client",
   "resources": {
-    "hash": "sha256-k00zTIV20wQwdRA2lUh/XusRB4nO8AVJaznUb33pazA=",
+    "hash": "sha256-4Ix3sPpNPXsvMNrK4xt4SuRJU9j5Ck0bDjt8q1UYYaE=",
     "fingerprinting": {
       "Blazored.LocalStorage.12n6dz54qr.wasm": "Blazored.LocalStorage.wasm",
       "Microsoft.AspNetCore.Authorization.n41ua9ceve.wasm": "Microsoft.AspNetCore.Authorization.wasm",
@@ -204,8 +204,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "TodoListApp.Client.vfc7ic9ytl.wasm": "TodoListApp.Client.wasm",
-      "TodoListApp.Client.t7zkr5e90i.pdb": "TodoListApp.Client.pdb"
+      "TodoListApp.Client.jf20lx4n12.wasm": "TodoListApp.Client.wasm",
+      "TodoListApp.Client.8e2qeelzzj.pdb": "TodoListApp.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hmanx9razn.js": "sha256-d7UNSArplVrX3arY2Kmhxp1wN79ng8hLqIBrkiQ9Gbo="
@@ -418,10 +418,10 @@
       "WindowsBase.377bly7twj.wasm": "sha256-0VmBdMjdc0nZGHDSfaGirT6y3mJTM0qx8eqCUC/rpiE=",
       "mscorlib.o0184ey5ia.wasm": "sha256-2GxNKZQJVJvYMUxSTuXa5V2qxawSMMHZtwG33SKVCZU=",
       "netstandard.hb3h2rr8mk.wasm": "sha256-DWn9+RH/ElZQ6imlYqVwZvir1KTzNwY18AzGmnyiymU=",
-      "TodoListApp.Client.vfc7ic9ytl.wasm": "sha256-u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU="
+      "TodoListApp.Client.jf20lx4n12.wasm": "sha256-T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8="
     },
     "pdb": {
-      "TodoListApp.Client.t7zkr5e90i.pdb": "sha256-ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M="
+      "TodoListApp.Client.8e2qeelzzj.pdb": "sha256-YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic="
     }
   },
   "cacheBootResources": true,

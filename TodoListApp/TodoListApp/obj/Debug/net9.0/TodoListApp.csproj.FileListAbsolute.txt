@@ -146,3 +146,4 @@
 /Users/macos/Desktop/TodoList/TodoListApp/TodoListApp/obj/Debug/net9.0/TodoListApp.genruntimeconfig.cache
 /Users/macos/Desktop/TodoList/TodoListApp/TodoListApp/obj/Debug/net9.0/ref/TodoListApp.dll
 /Users/macos/Desktop/TodoList/TodoListApp/TodoListApp/bin/Debug/net9.0/Blazored.LocalStorage.dll
+/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp/obj/Debug/net9.0/TodoListApp.sourcelink.json

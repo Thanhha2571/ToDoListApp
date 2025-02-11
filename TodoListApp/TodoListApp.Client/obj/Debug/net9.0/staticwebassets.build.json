@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IJG04IjY91Ljas7ZErvPaIvWqBkGz2oSCnpgGJuNBYY=",
+  "Hash": "7ce8rEaeW3IvA+QMx5sziyxu76ViagzsmGGfDmRP3pg=",
   "Source": "TodoListApp.Client",
   "BasePath": "/",
   "Mode": "Default",
@@ -934,8 +934,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "jz4lllmbl0",
-      "Integrity": "gSp6r8qKNEH4YxXYPROixnH/KQb+0n1Bly+IP1JyQVw=",
+      "Fingerprint": "vk08al75jw",
+      "Integrity": "7yKZ7TZ2Xm4emtVcr4V/hHE1pFKZtqR/W1OBq2wVPfY=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj/Debug/net9.0/blazor.boot.json"
@@ -5218,8 +5218,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "t7zkr5e90i",
-      "Integrity": "ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M=",
+      "Fingerprint": "8e2qeelzzj",
+      "Integrity": "YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj/Debug/net9.0/TodoListApp.Client.pdb"
@@ -5239,8 +5239,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "vfc7ic9ytl",
-      "Integrity": "u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU=",
+      "Fingerprint": "jf20lx4n12",
+      "Integrity": "T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/webcil/TodoListApp.Client.wasm"
@@ -6989,12 +6989,12 @@
       "OriginalItemSpec": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/System.Drawing.wasm"
     },
     {
-      "Identity": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-t7zkr5e90i.gz",
+      "Identity": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-8e2qeelzzj.gz",
       "SourceId": "TodoListApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/",
       "BasePath": "/",
-      "RelativePath": "_framework/TodoListApp.Client#[.{fingerprint=t7zkr5e90i}]!.pdb.gz",
+      "RelativePath": "_framework/TodoListApp.Client#[.{fingerprint=8e2qeelzzj}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -7003,8 +7003,8 @@
       "RelatedAsset": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "srav8tht8q",
-      "Integrity": "SDTFF2XHv/F0NhLqgMyVd9U+gv6+zi/OgTdqd0c1EAs=",
+      "Fingerprint": "z2i2ymst6o",
+      "Integrity": "9b3z1pvciXzU739DQ3LuPg3SDhcYpN1jc3kNG/Az0tw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.pdb"
@@ -9845,7 +9845,7 @@
       "OriginalItemSpec": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/System.Private.CoreLib.wasm"
     },
     {
-      "Identity": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/vi0tgvm5mu-jz4lllmbl0.gz",
+      "Identity": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/vi0tgvm5mu-vk08al75jw.gz",
       "SourceId": "TodoListApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/",
@@ -9859,8 +9859,8 @@
       "RelatedAsset": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "z7wtw1zx6o",
-      "Integrity": "oYOQqC8h5iT2Rh3GFOQUNkn7fHRm+THJHF7Mnb2igO4=",
+      "Fingerprint": "tif4lrj35b",
+      "Integrity": "lZiW8W4u1DxbDb1MBx/wA2vNTIvcw9bO4SnTdO7pESU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json"
@@ -10076,12 +10076,12 @@
       "OriginalItemSpec": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/wwwroot/appsettings.Development.json"
     },
     {
-      "Identity": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-vfc7ic9ytl.gz",
+      "Identity": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-jf20lx4n12.gz",
       "SourceId": "TodoListApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/",
       "BasePath": "/",
-      "RelativePath": "_framework/TodoListApp.Client#[.{fingerprint=vfc7ic9ytl}]!.wasm.gz",
+      "RelativePath": "_framework/TodoListApp.Client#[.{fingerprint=jf20lx4n12}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -10090,8 +10090,8 @@
       "RelatedAsset": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "e767cq4dl3",
-      "Integrity": "Ks/TPtUmePQXZxfVphYpgeKZR2LbDBK7xXEtMoVwORQ=",
+      "Fingerprint": "j62gyaxxct",
+      "Integrity": "C4kklAebd8gK+tSq7Jujaq8LjgsPYWV4q6uszbNZ54Y=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.wasm"
@@ -18047,11 +18047,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gSp6r8qKNEH4YxXYPROixnH/KQb+0n1Bly+IP1JyQVw=\""
+          "Value": "\"7yKZ7TZ2Xm4emtVcr4V/hHE1pFKZtqR/W1OBq2wVPfY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18061,13 +18061,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gSp6r8qKNEH4YxXYPROixnH/KQb+0n1Bly+IP1JyQVw="
+          "Value": "sha256-7yKZ7TZ2Xm4emtVcr4V/hHE1pFKZtqR/W1OBq2wVPfY="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/vi0tgvm5mu-jz4lllmbl0.gz",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/vi0tgvm5mu-vk08al75jw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -18086,11 +18086,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oYOQqC8h5iT2Rh3GFOQUNkn7fHRm+THJHF7Mnb2igO4=\""
+          "Value": "\"lZiW8W4u1DxbDb1MBx/wA2vNTIvcw9bO4SnTdO7pESU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:11:32 GMT"
+          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18110,19 +18110,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"gSp6r8qKNEH4YxXYPROixnH/KQb+0n1Bly+IP1JyQVw=\""
+          "Value": "W/\"7yKZ7TZ2Xm4emtVcr4V/hHE1pFKZtqR/W1OBq2wVPfY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gSp6r8qKNEH4YxXYPROixnH/KQb+0n1Bly+IP1JyQVw="
+          "Value": "sha256-7yKZ7TZ2Xm4emtVcr4V/hHE1pFKZtqR/W1OBq2wVPfY="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/vi0tgvm5mu-jz4lllmbl0.gz",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/vi0tgvm5mu-vk08al75jw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -18139,11 +18139,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oYOQqC8h5iT2Rh3GFOQUNkn7fHRm+THJHF7Mnb2igO4=\""
+          "Value": "\"lZiW8W4u1DxbDb1MBx/wA2vNTIvcw9bO4SnTdO7pESU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:11:32 GMT"
+          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18161,7 +18161,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-oYOQqC8h5iT2Rh3GFOQUNkn7fHRm+THJHF7Mnb2igO4="
+          "Value": "sha256-lZiW8W4u1DxbDb1MBx/wA2vNTIvcw9bO4SnTdO7pESU="
         }
       ]
     },
@@ -78499,7 +78499,7 @@
       ]
     },
     {
-      "Route": "_framework/TodoListApp.Client.pdb",
+      "Route": "_framework/TodoListApp.Client.8e2qeelzzj.pdb",
       "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -78509,7 +78509,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37848"
+          "Value": "36476"
         },
         {
           "Name": "Content-Type",
@@ -78517,148 +78517,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M=\""
+          "Value": "\"YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/TodoListApp.Client.pdb",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-t7zkr5e90i.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000034500604"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "28984"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SDTFF2XHv/F0NhLqgMyVd9U+gv6+zi/OgTdqd0c1EAs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/TodoListApp.Client.pdb.gz",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-t7zkr5e90i.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "28984"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SDTFF2XHv/F0NhLqgMyVd9U+gv6+zi/OgTdqd0c1EAs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SDTFF2XHv/F0NhLqgMyVd9U+gv6+zi/OgTdqd0c1EAs="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/TodoListApp.Client.t7zkr5e90i.pdb",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "37848"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:08 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -78668,7 +78531,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t7zkr5e90i"
+          "Value": "8e2qeelzzj"
         },
         {
           "Name": "label",
@@ -78676,18 +78539,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M="
+          "Value": "sha256-YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic="
         }
       ]
     },
     {
-      "Route": "_framework/TodoListApp.Client.t7zkr5e90i.pdb",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-t7zkr5e90i.gz",
+      "Route": "_framework/TodoListApp.Client.8e2qeelzzj.pdb",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-8e2qeelzzj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000034500604"
+          "Quality": "0.000035811488"
         }
       ],
       "ResponseHeaders": [
@@ -78697,15 +78560,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "28984"
+          "Value": "27923"
         },
         {
           "Name": "ETag",
-          "Value": "\"SDTFF2XHv/F0NhLqgMyVd9U+gv6+zi/OgTdqd0c1EAs=\""
+          "Value": "\"9b3z1pvciXzU739DQ3LuPg3SDhcYpN1jc3kNG/Az0tw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -78725,13 +78588,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M=\""
+          "Value": "W/\"YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t7zkr5e90i"
+          "Value": "8e2qeelzzj"
         },
         {
           "Name": "label",
@@ -78739,13 +78602,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ST7ztEC02hpdzrMv5Ks6q5xDXzUP6KAUYjzA7uG599M="
+          "Value": "sha256-YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic="
         }
       ]
     },
     {
-      "Route": "_framework/TodoListApp.Client.t7zkr5e90i.pdb.gz",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-t7zkr5e90i.gz",
+      "Route": "_framework/TodoListApp.Client.8e2qeelzzj.pdb.gz",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-8e2qeelzzj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -78754,7 +78617,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "28984"
+          "Value": "27923"
         },
         {
           "Name": "Content-Type",
@@ -78762,11 +78625,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SDTFF2XHv/F0NhLqgMyVd9U+gv6+zi/OgTdqd0c1EAs=\""
+          "Value": "\"9b3z1pvciXzU739DQ3LuPg3SDhcYpN1jc3kNG/Az0tw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -78784,7 +78647,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t7zkr5e90i"
+          "Value": "8e2qeelzzj"
         },
         {
           "Name": "label",
@@ -78792,12 +78655,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SDTFF2XHv/F0NhLqgMyVd9U+gv6+zi/OgTdqd0c1EAs="
+          "Value": "sha256-9b3z1pvciXzU739DQ3LuPg3SDhcYpN1jc3kNG/Az0tw="
         }
       ]
     },
     {
-      "Route": "_framework/TodoListApp.Client.vfc7ic9ytl.wasm",
+      "Route": "_framework/TodoListApp.Client.jf20lx4n12.wasm",
       "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.wasm",
       "Selectors": [],
       "ResponseHeaders": [
@@ -78807,7 +78670,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45333"
+          "Value": "44309"
         },
         {
           "Name": "Content-Type",
@@ -78815,11 +78678,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU=\""
+          "Value": "\"T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:08 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -78829,7 +78692,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vfc7ic9ytl"
+          "Value": "jf20lx4n12"
         },
         {
           "Name": "label",
@@ -78837,18 +78700,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU="
+          "Value": "sha256-T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8="
         }
       ]
     },
     {
-      "Route": "_framework/TodoListApp.Client.vfc7ic9ytl.wasm",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-vfc7ic9ytl.gz",
+      "Route": "_framework/TodoListApp.Client.jf20lx4n12.wasm",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-jf20lx4n12.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000054857644"
+          "Quality": "0.000058363488"
         }
       ],
       "ResponseHeaders": [
@@ -78858,15 +78721,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18228"
+          "Value": "17133"
         },
         {
           "Name": "ETag",
-          "Value": "\"Ks/TPtUmePQXZxfVphYpgeKZR2LbDBK7xXEtMoVwORQ=\""
+          "Value": "\"C4kklAebd8gK+tSq7Jujaq8LjgsPYWV4q6uszbNZ54Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -78886,13 +78749,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU=\""
+          "Value": "W/\"T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vfc7ic9ytl"
+          "Value": "jf20lx4n12"
         },
         {
           "Name": "label",
@@ -78900,13 +78763,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU="
+          "Value": "sha256-T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8="
         }
       ]
     },
     {
-      "Route": "_framework/TodoListApp.Client.vfc7ic9ytl.wasm.gz",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-vfc7ic9ytl.gz",
+      "Route": "_framework/TodoListApp.Client.jf20lx4n12.wasm.gz",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-jf20lx4n12.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -78915,7 +78778,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18228"
+          "Value": "17133"
         },
         {
           "Name": "Content-Type",
@@ -78923,11 +78786,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ks/TPtUmePQXZxfVphYpgeKZR2LbDBK7xXEtMoVwORQ=\""
+          "Value": "\"C4kklAebd8gK+tSq7Jujaq8LjgsPYWV4q6uszbNZ54Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -78945,7 +78808,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vfc7ic9ytl"
+          "Value": "jf20lx4n12"
         },
         {
           "Name": "label",
@@ -78953,7 +78816,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Ks/TPtUmePQXZxfVphYpgeKZR2LbDBK7xXEtMoVwORQ="
+          "Value": "sha256-C4kklAebd8gK+tSq7Jujaq8LjgsPYWV4q6uszbNZ54Y="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/TodoListApp.Client.pdb",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/bin/Debug/net9.0/wwwroot/_framework/TodoListApp.Client.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 15:22:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/TodoListApp.Client.pdb",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-8e2qeelzzj.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000035811488"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27923"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9b3z1pvciXzU739DQ3LuPg3SDhcYpN1jc3kNG/Az0tw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YJvjqI4TSWHkCnJdxMP+sWlra6kFtuWVgoelGCIwHic="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/TodoListApp.Client.pdb.gz",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/dxndxyxyjy-8e2qeelzzj.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9b3z1pvciXzU739DQ3LuPg3SDhcYpN1jc3kNG/Az0tw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9b3z1pvciXzU739DQ3LuPg3SDhcYpN1jc3kNG/Az0tw="
         }
       ]
     },
@@ -78968,7 +78968,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45333"
+          "Value": "44309"
         },
         {
           "Name": "Content-Type",
@@ -78976,11 +78976,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU=\""
+          "Value": "\"T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:08 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -78990,18 +78990,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU="
+          "Value": "sha256-T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8="
         }
       ]
     },
     {
       "Route": "_framework/TodoListApp.Client.wasm",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-vfc7ic9ytl.gz",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-jf20lx4n12.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000054857644"
+          "Quality": "0.000058363488"
         }
       ],
       "ResponseHeaders": [
@@ -79011,15 +79011,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18228"
+          "Value": "17133"
         },
         {
           "Name": "ETag",
-          "Value": "\"Ks/TPtUmePQXZxfVphYpgeKZR2LbDBK7xXEtMoVwORQ=\""
+          "Value": "\"C4kklAebd8gK+tSq7Jujaq8LjgsPYWV4q6uszbNZ54Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -79039,19 +79039,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU=\""
+          "Value": "W/\"T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-u0wvKxY9ir9ef1KQlGVwhzuPZAJ3CsEVTK2Ch2UAEXU="
+          "Value": "sha256-T2WmgFqoxkcODy3+HRR+TnrsjiqEg2D74PBYQ8Ga9W8="
         }
       ]
     },
     {
       "Route": "_framework/TodoListApp.Client.wasm.gz",
-      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-vfc7ic9ytl.gz",
+      "AssetFile": "/Users/macos/Desktop/TodoList/TodoListApp/TodoListApp.Client/obj/Debug/net9.0/compressed/wob7om3c55-jf20lx4n12.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -79060,7 +79060,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18228"
+          "Value": "17133"
         },
         {
           "Name": "Content-Type",
@@ -79068,11 +79068,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ks/TPtUmePQXZxfVphYpgeKZR2LbDBK7xXEtMoVwORQ=\""
+          "Value": "\"C4kklAebd8gK+tSq7Jujaq8LjgsPYWV4q6uszbNZ54Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 09:12:09 GMT"
+          "Value": "Mon, 10 Feb 2025 15:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -79090,7 +79090,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ks/TPtUmePQXZxfVphYpgeKZR2LbDBK7xXEtMoVwORQ="
+          "Value": "sha256-C4kklAebd8gK+tSq7Jujaq8LjgsPYWV4q6uszbNZ54Y="
         }
       ]
     },
