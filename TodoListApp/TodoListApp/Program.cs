@@ -1,15 +1,18 @@
 using TodoListApp.Client.Pages;
 using TodoListApp.Components;
 using Radzen;
-namespace TodoListApp;
 using Blazored.LocalStorage;
+using TodoListApp.Client.service;
+
+
+namespace TodoListApp;
 
 public class Program
 {
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        // builder.Services.AddScoped<ToDoItemDataService>();
+        builder.Services.AddScoped<ToDoItemDataService>();
 
         // Add services to the container.
         builder.Services.AddRazorComponents()

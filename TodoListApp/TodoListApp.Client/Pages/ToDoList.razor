@@ -1,8 +1,9 @@
 @page "/todo_list"
-@using Blazored.LocalStorage
-@inject ILocalStorageService LocalStorage
+
 @using TodoListApp.Client.Models
-@* @inject ToDoItemDataService ToDoItemDataService *@
+@using TodoListApp.Client.service
+
+@inject ToDoItemDataService ToDoItemDataService
 
 <PageTitle>Todo List</PageTitle>
 
@@ -67,23 +68,7 @@
 
 @code {
     private List<ToDoItem> Tasks = new();
-    private ToDoItem EditingTask { get; set; }
-
-    @* public class ToDoItem
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public bool Status { get; set; }
-        public Category Category { get; set; }
-        public DateTime? Deadline { get; set; }
-    }
-
-    public enum Category
-    {
-        None,
-        Personal,
-        Business
-    } *@
+    private ToDoItem? EditingTask { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -94,7 +79,7 @@
     {
         try
         {
-            Tasks = await LocalStorage.GetItemAsync<List<ToDoItem>>("tasks") ?? new List<ToDoItem>();
+            Tasks = await ToDoItemDataService.GetTasksAsync();
         }
         catch (Exception)
         {
@@ -116,17 +101,14 @@
 
     private async Task SaveTask()
     {
-        var task = Tasks.FirstOrDefault(t => t.Id == EditingTask.Id);
-        if (task != null)
+        if (EditingTask == null)
         {
-            task.Name = EditingTask.Name;
-            task.Status = EditingTask.Status;
-            task.Category = EditingTask.Category;
-            task.Deadline = EditingTask.Deadline;
-
-            await LocalStorage.SetItemAsync("tasks", Tasks);
+            return;
         }
-        EditingTask = null;
+        else 
+        {
+            await ToDoItemDataService.UpdateTaskAsync(EditingTask);
+        }
     }
 
     private void CancelEdit()

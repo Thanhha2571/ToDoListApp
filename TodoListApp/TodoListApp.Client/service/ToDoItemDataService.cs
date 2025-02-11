@@ -5,10 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using TodoListApp.Client.Models;
 
+namespace TodoListApp.Client.service;
+ 
 public class ToDoItemDataService
 {
     private readonly ILocalStorageService _localStorage;
-    // private const string StorageKey = "tasks";
+    private const string StorageKey = "tasks";
 
     public ToDoItemDataService(ILocalStorageService localStorage)
     {
@@ -17,7 +19,7 @@ public class ToDoItemDataService
 
     public async Task<List<ToDoItem>> GetTasksAsync()
     {
-        return await _localStorage.GetItemAsync<List<ToDoItem>>("tasks") ?? [];
+        return await _localStorage.GetItemAsync<List<ToDoItem>>(StorageKey) ?? [];
     }
 
     public async Task AddTaskAsync(ToDoItem newTask)
@@ -51,6 +53,6 @@ public class ToDoItemDataService
 
     private async Task SaveTasksAsync(List<ToDoItem> tasks)
     {
-        await _localStorage.SetItemAsync("tasks", tasks);
+        await _localStorage.SetItemAsync(StorageKey, tasks);
     }
 }

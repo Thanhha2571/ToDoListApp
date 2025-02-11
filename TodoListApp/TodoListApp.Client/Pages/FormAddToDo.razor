@@ -1,6 +1,9 @@
 @page "/add_todo"
-@using Blazored.LocalStorage
-@inject ILocalStorageService LocalStorage
+
+@using TodoListApp.Client.Models
+@using TodoListApp.Client.service
+
+@inject ToDoItemDataService ToDoItemDataService
 
 <PageTitle>Form Page</PageTitle>
 <div class="d-flex align-items-center justify-content-center">
@@ -29,38 +32,20 @@
 
 
 @code {
+
     private List<ToDoItem> Tasks = new();
-    private ToDoItem NewTask = new ToDoItem();
-    private int Id = 1;
-
-    public class ToDoItem
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public bool Status { get; set; }
-        public Category Category { get; set; }
-        public DateTime? Deadline { get; set; }
-    }
-
-    public enum Category
-    {
-        None,
-        Personal,
-        Business
-    }
+    private ToDoItem NewTask = new();
 
     private async Task AddTask()
     {
-        NewTask.Id = Id++;
-        Tasks.Add(NewTask);
-
-        await LocalStorage.SetItemAsync("tasks", Tasks);
-
-        @* Console.WriteLine("Current Tasks:"); *@
-        @* foreach (var task in Tasks)
+        try
         {
-            Console.WriteLine($"ID: {task.Id}, Name: {task.Name}, Status: {(task.Status ? "Done" : "Not Done")}, Category: {task.Category}, Deadline: {task.Deadline?.ToShortDateString()}");
-        } *@
-        NewTask = new ToDoItem();
+            await ToDoItemDataService.AddTaskAsync(NewTask);
+            NewTask = new ToDoItem();
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("error adding task");
+        }
     }
 }
