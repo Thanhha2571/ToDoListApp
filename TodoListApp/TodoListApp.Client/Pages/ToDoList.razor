@@ -2,13 +2,18 @@
 
 @using TodoListApp.Client.Models
 @using TodoListApp.Client.service
+@using Blazored.LocalStorage
 
 @inject ToDoItemDataService ToDoItemDataService
+@inject PersonDataService PersonDataService
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager Navigation
 
 <PageTitle>Todo List</PageTitle>
 
-<div class="top-row px-4">
-    <a href="add_todo">Add New To Do</a>
+<div class="d-flex gap-3 justify-content-end" style="margin-bottom: 20px;">
+    <RadzenButton ButtonStyle="ButtonStyle.Primary"><a href="add_todo" style="text-decoration: none; color: aliceblue;">Add New To Do</a></RadzenButton>
+    <RadzenButton ButtonStyle="ButtonStyle.Secondary"><a href="add_person" style="text-decoration: none; color: aliceblue;">Add New Person</a></RadzenButton>
 </div>
 
 <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="true"
@@ -27,9 +32,15 @@
         <RadzenDataGridColumn Property="@nameof(ToDoItem.Category)" Title="Category" Width="120px" />
         <RadzenDataGridColumn Property="@nameof(ToDoItem.Deadline)" Title="Deadline" FormatString="{0:d}"
             Width="160px" />
-        <RadzenDataGridColumn Title="Actions" Width="120px">
+        <RadzenDataGridColumn Property="@nameof(ToDoItem.PersonId)" Title="Assigned Person" Width="200px">
+            <Template Context="task">
+                @People.FirstOrDefault(p => p.Id == task.PersonId)?.Name
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn Title="Actions" Width="240px">
             <Template Context="task">
                 <RadzenButton Text="Edit" Click="() => EditTask(task)" ButtonStyle="ButtonStyle.Primary" />
+                <RadzenButton Text="Delelte" Click="() => DeleteTask(task)" ButtonStyle="ButtonStyle.Danger" />
             </Template>
         </RadzenDataGridColumn>
     </Columns>
@@ -41,7 +52,7 @@
         <div class="d-flex flex-column w-50 justify-content-center align-items-center">
             <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H2">Form Edit To Do</RadzenText>
             <RadzenCard class="d-flex flex-column w-100 justify-content-center gap-3 p-12">
-                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">To Do</RadzenText>
+                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">To Do Name</RadzenText>
                 <RadzenTextBox @bind-Value="EditingTask.Name" Placeholder="To Do Name" Style="width: 100%" />
 
                 <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Category</RadzenText>
@@ -56,7 +67,11 @@
                 <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Deadline</RadzenText>
                 <RadzenDatePicker @bind-Value="EditingTask.Deadline" Placeholder="Select deadline" Style="width: 100%" />
 
-                <div>
+                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Assigned Person</RadzenText>
+                <RadzenDropDown @bind-Value="EditingTask.PersonId" Data="@People" TextProperty="Name" ValueProperty="Id"
+                    Placeholder="Select a person" Style="width: 100%" />
+
+                <div class="d-flex justify-content-center">
                     <RadzenButton Text="Save" Click="SaveTask" ButtonStyle="ButtonStyle.Success" />
                     <RadzenButton Text="Cancel" Click="CancelEdit" ButtonStyle="ButtonStyle.Danger"
                         Style="margin-left: 10px;" />
@@ -68,11 +83,14 @@
 
 @code {
     private List<ToDoItem> Tasks = new();
+    private List<Person> People = new();
     private ToDoItem? EditingTask { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         await GetTasksFromLocalStorage();
+        await GetPeopleFromLocalStorage();
+        await base.OnInitializedAsync();
     }
 
     async Task GetTasksFromLocalStorage()
@@ -80,6 +98,18 @@
         try
         {
             Tasks = await ToDoItemDataService.GetTasksAsync();
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("error reading 'tasks'");
+        }
+    }
+
+    async Task GetPeopleFromLocalStorage()
+    {
+        try
+        {
+            People = await PersonDataService.GetPeopleAsync();
         }
         catch (Exception)
         {
@@ -95,7 +125,8 @@
             Name = task.Name,
             Status = task.Status,
             Category = task.Category,
-            Deadline = task.Deadline
+            Deadline = task.Deadline,
+            PersonId = task.PersonId,
         };
     }
 
@@ -105,10 +136,21 @@
         {
             return;
         }
-        else 
+        else
         {
             await ToDoItemDataService.UpdateTaskAsync(EditingTask);
+            EditingTask = null;
+            Tasks = await ToDoItemDataService.GetTasksAsync();
         }
+    }
+
+    private async Task DeleteTask(ToDoItem task)
+    {
+        if (task == null) return;
+
+        await ToDoItemDataService.DeleteTaskAsync(task.Id);
+
+        Tasks = await ToDoItemDataService.GetTasksAsync();
     }
 
     private void CancelEdit()

@@ -2,8 +2,12 @@
 
 @using TodoListApp.Client.Models
 @using TodoListApp.Client.service
+@using Blazored.LocalStorage
 
 @inject ToDoItemDataService ToDoItemDataService
+@inject PersonDataService PersonDataService
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager Navigation
 
 <PageTitle>Form Page</PageTitle>
 <div class="d-flex align-items-center justify-content-center">
@@ -14,27 +18,47 @@
             <RadzenTextBox @bind-Value="NewTask.Name" Placeholder="Enter to do name..." Style="width: 100%" />
 
             <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Category</RadzenText>
-            <RadzenDropDown @bind-Value="NewTask.Category" Data="@Enum.GetValues(typeof(Category))"
+            <RadzenDropDown @bind-Value="NewTask.Category" Data="@(Enum.GetValues<Category>())"
                 Placeholder="Select category" Style="width: 100%" />
+
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Assigned Person</RadzenText>
+            <RadzenDropDown @bind-Value="NewTask.PersonId" Data="@People" TextProperty="Name" ValueProperty="Id"
+                Placeholder="Select a person" Style="width: 100%" />
+
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Deadline</RadzenText>
+            <RadzenDatePicker @bind-Value="NewTask.Deadline" Placeholder="Select deadline" Style="width: 100%" />
 
             <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Status</RadzenText>
             <div class="d-flex gap-2 align-items-center">
                 <RadzenCheckBox @bind-Value="NewTask.Status" /> Completed
             </div>
 
-            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Deadline</RadzenText>
-            <RadzenDatePicker @bind-Value="NewTask.Deadline" Placeholder="Select deadline" Style="width: 100%" />
-
             <RadzenButton Text="Add Task" Click="@AddTask" />
         </RadzenCard>
     </div>
 </div>
 
-
 @code {
-
     private List<ToDoItem> Tasks = new();
+    private List<Person> People = new();
     private ToDoItem NewTask = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetPeopleFromLocalStorage();
+    }
+
+    async Task GetPeopleFromLocalStorage()
+    {
+        try
+        {
+            People = await PersonDataService.GetPeopleAsync();
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("error reading 'tasks'");
+        }
+    }
 
     private async Task AddTask()
     {
@@ -42,6 +66,8 @@
         {
             await ToDoItemDataService.AddTaskAsync(NewTask);
             NewTask = new ToDoItem();
+
+            Navigation.NavigateTo("/todo_list");
         }
         catch (Exception)
         {

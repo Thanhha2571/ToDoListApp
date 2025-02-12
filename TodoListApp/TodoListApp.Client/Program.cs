@@ -11,6 +11,8 @@ class Program
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args);
         builder.Services.AddScoped<ToDoItemDataService>();
+        builder.Services.AddScoped<PersonDataService>();
+
         builder.Services.AddRadzenComponents();
         builder.Services.AddBlazoredLocalStorage();
         await builder.Build().RunAsync();

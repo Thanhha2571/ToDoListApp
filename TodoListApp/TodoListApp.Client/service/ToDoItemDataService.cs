@@ -40,7 +40,9 @@ public class ToDoItemDataService
             existingTask.Status = updatedTask.Status;
             existingTask.Category = updatedTask.Category;
             existingTask.Deadline = updatedTask.Deadline;
+            existingTask.PersonId = updatedTask.PersonId;
             await SaveTasksAsync(tasks);
+            
         }
     }
 

@@ -1,0 +1,47 @@
+@page "/add_person"
+@using Blazored.LocalStorage
+@using TodoListApp.Client.Models
+@using TodoListApp.Client.service
+
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager Navigation
+@inject PersonDataService PersonDataService
+
+<PageTitle>Add Person</PageTitle>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="d-flex flex-column w-50 justify-content-center align-items-center">
+        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H2">Add New Person</RadzenText>
+        <RadzenCard class="d-flex flex-column w-100 justify-content-center gap-3 p-12">
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Name</RadzenText>
+            <RadzenTextBox @bind-Value="NewPerson.Name" Placeholder="Enter name..." Style="width: 100%" />
+
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Age</RadzenText>
+            <RadzenNumeric @bind-Value="NewPerson.Age" Min="1" Max="100" Style="width: 100%" />
+
+            <RadzenButton Text="Add Person" Click="@AddPerson" />
+        </RadzenCard>
+    </div>
+</div>
+
+@code {
+    private List<Person> People = new();
+    private Person NewPerson = new Person();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetPeopleFromLocalStorage();
+    }
+
+    async Task GetPeopleFromLocalStorage()
+    {
+        People = await LocalStorage.GetItemAsync<List<Person>>("people") ?? new List<Person>();
+    }
+
+    private async Task AddPerson()
+    {
+        await PersonDataService.AddPersonAsync(NewPerson);
+        NewPerson = new Person();
+
+        Navigation.NavigateTo("/todo_list");
+    }
+}

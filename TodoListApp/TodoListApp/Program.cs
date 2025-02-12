@@ -13,6 +13,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddScoped<ToDoItemDataService>();
+        builder.Services.AddScoped<PersonDataService>();
 
         // Add services to the container.
         builder.Services.AddRazorComponents()
