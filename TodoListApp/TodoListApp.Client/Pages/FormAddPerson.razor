@@ -6,6 +6,7 @@
 @inject ILocalStorageService LocalStorage
 @inject NavigationManager Navigation
 @inject PersonDataService PersonDataService
+@inject NotificationService NotificationService
 
 <PageTitle>Add Person</PageTitle>
 <div class="d-flex align-items-center justify-content-center">
@@ -41,7 +42,13 @@
     {
         await PersonDataService.AddPersonAsync(NewPerson);
         NewPerson = new Person();
-
+        NotificationService.Notify(new NotificationMessage
+        {
+            Severity = NotificationSeverity.Success,
+            SummaryContent = ns =>@<RadzenText TextStyle="TextStyle.H6">Success</RadzenText>,
+            DetailContent = ns => @<RadzenButton Text="Added Successfully" Style="width: 100%;" ButtonStyle="ButtonStyle.Success" />
+        });
+        await Task.Delay(2000);
         Navigation.NavigateTo("/todo_list");
     }
 }

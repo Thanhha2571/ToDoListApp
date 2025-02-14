@@ -8,12 +8,15 @@
 @inject PersonDataService PersonDataService
 @inject ILocalStorageService LocalStorage
 @inject NavigationManager Navigation
+@inject NotificationService NotificationService
 
 <PageTitle>Todo List</PageTitle>
 
 <div class="d-flex gap-3 justify-content-end" style="margin-bottom: 20px;">
-    <RadzenButton ButtonStyle="ButtonStyle.Primary"><a href="add_todo" style="text-decoration: none; color: aliceblue;">Add New To Do</a></RadzenButton>
-    <RadzenButton ButtonStyle="ButtonStyle.Secondary"><a href="add_person" style="text-decoration: none; color: aliceblue;">Add New Person</a></RadzenButton>
+    <RadzenButton ButtonStyle="ButtonStyle.Primary"><a href="add_todo"
+            style="text-decoration: none; color: aliceblue;">Add New To Do</a></RadzenButton>
+    <RadzenButton ButtonStyle="ButtonStyle.Secondary"><a href="add_person"
+            style="text-decoration: none; color: aliceblue;">Add New Person</a></RadzenButton>
 </div>
 
 <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="true"
@@ -56,7 +59,7 @@
                 <RadzenTextBox @bind-Value="EditingTask.Name" Placeholder="To Do Name" Style="width: 100%" />
 
                 <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Category</RadzenText>
-                <RadzenDropDown @bind-Value="EditingTask.Category" Data="@Enum.GetValues(typeof(Category))"
+                <RadzenDropDown @bind-Value="EditingTask.Category" Data="@(Enum.GetValues(typeof(Category)).Cast<Enum>())"
                     Placeholder="Select category" Style="width: 100%" />
 
                 <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Status</RadzenText>
@@ -141,6 +144,13 @@
             await ToDoItemDataService.UpdateTaskAsync(EditingTask);
             EditingTask = null;
             Tasks = await ToDoItemDataService.GetTasksAsync();
+            NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Success,
+                SummaryContent = ns =>@<RadzenText TextStyle="TextStyle.H6">Success</RadzenText>,
+                DetailContent = ns => @<RadzenButton Text="Edited Successfully" Style="width: 100%;" ButtonStyle="ButtonStyle.Success" />
+            });
+            await Task.Delay(2000);
         }
     }
 
@@ -151,6 +161,12 @@
         await ToDoItemDataService.DeleteTaskAsync(task.Id);
 
         Tasks = await ToDoItemDataService.GetTasksAsync();
+        NotificationService.Notify(new NotificationMessage
+        {
+            Severity = NotificationSeverity.Warning,
+            SummaryContent = ns =>@<RadzenText TextStyle="TextStyle.H6">Success</RadzenText>,
+            DetailContent = ns => @<RadzenButton Text="Deleted Successfully" Style="width: 100%;" ButtonStyle="ButtonStyle.Danger" />
+        });
     }
 
     private void CancelEdit()

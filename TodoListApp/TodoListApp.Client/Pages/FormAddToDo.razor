@@ -8,6 +8,7 @@
 @inject PersonDataService PersonDataService
 @inject ILocalStorageService LocalStorage
 @inject NavigationManager Navigation
+@inject NotificationService NotificationService
 
 <PageTitle>Form Page</PageTitle>
 <div class="d-flex align-items-center justify-content-center">
@@ -18,7 +19,7 @@
             <RadzenTextBox @bind-Value="NewTask.Name" Placeholder="Enter to do name..." Style="width: 100%" />
 
             <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Category</RadzenText>
-            <RadzenDropDown @bind-Value="NewTask.Category" Data="@(Enum.GetValues<Category>())"
+            <RadzenDropDown @bind-Value="NewTask.Category" Data="@(Enum.GetValues(typeof(Category)).Cast<Enum>())"
                 Placeholder="Select category" Style="width: 100%" />
 
             <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Assigned Person</RadzenText>
@@ -66,7 +67,13 @@
         {
             await ToDoItemDataService.AddTaskAsync(NewTask);
             NewTask = new ToDoItem();
-
+            NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Success,
+                SummaryContent = ns =>@<RadzenText TextStyle="TextStyle.H6">Success</RadzenText>,
+                DetailContent = ns => @<RadzenButton Text="Added Successfully" Style="width: 100%;" ButtonStyle="ButtonStyle.Success" />
+            });
+            await Task.Delay(2000);
             Navigation.NavigateTo("/todo_list");
         }
         catch (Exception)

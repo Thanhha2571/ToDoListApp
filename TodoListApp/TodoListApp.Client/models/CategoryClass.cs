@@ -1,5 +1,6 @@
-namespace TodoListApp.Client.Models {
-     public enum Category
+namespace TodoListApp.Client.Models
+{
+    public enum Category
     {
         None,
         Personal,
